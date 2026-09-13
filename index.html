@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>さくら台デンタルクリニック | 中央町一丁目</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dental: {
+                            50: '#f4f7fc',
+                            100: '#e2eaf6',
+                            200: '#cbdcf5',
+                            500: '#2b6cb0',
+                            600: '#2a52be',
+                            700: '#1a365d',
+                            800: '#152e4d',
+                            900: '#0f1f38',
+                        },
+                        sakura: {
+                            50: '#fff5f7',
+                            100: '#fed7e2',
+                            500: '#d53f8c',
+                            600: '#b83280',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Noto Sans JP', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts for Clean, Legible Japanese Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-white text-slate-700 antialiased selection:bg-dental-100 selection:text-dental-800">
+
+    <!-- Header / Navigation -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-2 sm:gap-3 group shrink-0">
+                <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-dental-700 flex items-center justify-center text-white shadow-md shadow-dental-700/20 group-hover:bg-dental-800 transition">
+                    <i class="fa-solid fa-tooth text-lg sm:text-xl"></i>
+                </div>
+                <div>
+                    <span class="text-[10px] sm:text-xs text-dental-600 font-semibold tracking-wider block">さくら台駅西口 徒歩3分</span>
+                    <span class="text-sm sm:text-xl font-bold text-dental-700 tracking-tight">さくら台デンタルクリニック</span>
+                </div>
+            </a>
+            
+            <!-- Desktop Nav -->
+            <nav class="hidden lg:flex items-center gap-8 font-medium text-slate-600">
+                <a href="#about" class="hover:text-dental-700 transition">当院について</a>
+                <a href="#services" class="hover:text-dental-700 transition">診療内容</a>
+                <a href="#hours" class="hover:text-dental-700 transition">診療時間・予約</a>
+                <a href="#access" class="hover:text-dental-700 transition">アクセス・駐車場</a>
+                <a href="#staff" class="hover:text-dental-700 transition">スタッフ紹介</a>
+            </nav>
+
+            <!-- Call button -->
+            <div class="flex items-center gap-2 sm:gap-3">
+                <a href="tel:0312345678" class="flex items-center gap-1.5 sm:gap-2 bg-dental-50 text-dental-700 px-3 sm:px-4 py-2 sm:py-2.5 rounded-full font-bold hover:bg-dental-100 transition border border-dental-200 text-xs sm:text-sm shrink-0">
+                    <i class="fa-solid fa-phone text-dental-600"></i>
+                    <span>03-1234-5678</span>
+                </a>
+                <button id="mobile-menu-btn" class="lg:hidden p-2 text-slate-600 hover:text-dental-700 rounded-lg hover:bg-slate-100 transition">
+                    <i class="fa-solid fa-bars text-lg sm:text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Nav Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-100 px-4 pt-2 pb-6 space-y-3 shadow-lg">
+            <a href="#about" class="block py-2 text-slate-700 font-medium hover:text-dental-700 border-b border-slate-50">当院について</a>
+            <a href="#services" class="block py-2 text-slate-700 font-medium hover:text-dental-700 border-b border-slate-50">診療内容</a>
+            <a href="#hours" class="block py-2 text-slate-700 font-medium hover:text-dental-700 border-b border-slate-50">診療時間・予約</a>
+            <a href="#access" class="block py-2 text-slate-700 font-medium hover:text-dental-700 border-b border-slate-50">アクセス・駐車場</a>
+            <a href="#staff" class="block py-2 text-slate-700 font-medium hover:text-dental-700 border-b border-slate-50">スタッフ紹介</a>
+            <div class="pt-2">
+                <a href="tel:0312345678" class="flex items-center justify-center gap-2 bg-dental-700 text-white w-full py-3 rounded-xl font-bold shadow-md">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>03-1234-5678 に電話する</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative bg-gradient-to-b from-dental-50/50 to-white py-16 sm:py-24 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                        <div class="inline-flex items-center gap-2 bg-dental-50 text-dental-700 px-3.5 py-1.5 rounded-full text-sm font-bold border border-dental-100">
+                            <i class="fa-solid fa-heart text-dental-600"></i> 初診の方も安心の優しい雰囲気
+                        </div>
+                        <h1 class="text-3xl sm:text-5xl font-bold text-dental-700 tracking-tight leading-tight">
+                            お口の健康から、<br class="hidden sm:inline"><span class="text-dental-600">笑顔あふれる毎日</span>をサポート
+                        </h1>
+                        <p class="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                            中央町の「さくら台デンタルクリニック」です。<br class="hidden sm:inline">患者様が安心して受診できるよう、優しく丁寧な説明・治療を心がけています。
+                        </p>
+                        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                            <a href="#hours" class="w-full sm:w-auto bg-dental-700 hover:bg-dental-800 text-white px-8 py-4 rounded-xl font-bold shadow-lg shadow-dental-700/20 transition text-center flex items-center justify-center gap-2">
+                                <i class="fa-regular fa-clock"></i> 診療時間・お電話予約
+                            </a>
+                            <a href="#access" class="w-full sm:w-auto bg-white hover:bg-slate-50 text-dental-700 border border-dental-200 px-8 py-4 rounded-xl font-bold shadow-sm transition text-center flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-location-dot text-dental-600"></i> アクセス・駐車場
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="lg:col-span-5">
+                        <div class="relative mx-auto max-w-md lg:max-w-none">
+                            <div class="absolute -inset-4 bg-gradient-to-r from-dental-100 to-dental-50 rounded-3xl blur-2xl -z-10"></div>
+                            <div class="bg-white p-4 rounded-3xl shadow-xl border border-slate-100 space-y-4">
+                                <div class="relative h-64 sm:h-72 rounded-2xl overflow-hidden bg-dental-50">
+                                    <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80" alt="クリニック内観" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/800x600/1a365d/ffffff?text=Dental+Clinic'">
+                                    <div class="absolute bottom-3 right-3 bg-white/95 backdrop-blur-sm px-3 py-1.5 rounded-lg text-xs font-bold text-dental-700 shadow border border-slate-100">
+                                        <i class="fa-solid fa-heart text-dental-600 mr-1"></i> 安心の空間
+                                    </div>
+                                </div>
+                                <div class="grid grid-cols-2 gap-3">
+                                    <div class="bg-dental-50/70 p-3.5 rounded-xl border border-dental-100 text-center">
+                                        <span class="block text-xs font-semibold text-dental-600">駅からのアクセス</span>
+                                        <span class="text-sm font-bold text-dental-700">西口 徒歩3分</span>
+                                    </div>
+                                    <div class="bg-dental-50/70 p-3.5 rounded-xl border border-dental-100 text-center">
+                                        <span class="block text-xs font-semibold text-dental-600">お車でお越しの方</span>
+                                        <span class="text-sm font-bold text-dental-700">30分無料券あり</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vision & Background Section -->
+        <section id="about" class="py-16 sm:py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                    <span class="text-dental-600 font-bold tracking-wider text-sm uppercase">About Our Clinic</span>
+                    <h2 class="text-2xl sm:text-4xl font-bold text-dental-700 tracking-tight">
+                        初診の方も<span class="relative inline-block">安心<span class="absolute left-0 -bottom-2 w-full h-1 bg-dental-600 rounded-full"></span></span>の優しい雰囲気
+                    </h2>
+                    <div class="pt-2"></div>
+                    <p class="text-slate-600 text-base sm:text-lg leading-relaxed pt-2">
+                        「歯医者さんは緊張する」というイメージをお持ちではありませんか？<br>
+                        当院では、いつも笑顔で優しいスタッフが患者様とのコミュニケーションを大切にし、<br class="hidden sm:inline">リラックスできる温かい環境づくりに努めています。
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition space-y-4">
+                        <div class="w-14 h-14 bg-dental-50 rounded-2xl flex items-center justify-center text-dental-700 text-2xl font-bold">
+                            <i class="fa-solid fa-comments"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-dental-700">丁寧なカウンセリング</h3>
+                        <p class="text-slate-600 leading-relaxed text-sm sm:text-base">
+                            治療前の不安や疑問を解消するため、優しいスタッフが分かりやすい言葉で丁寧に説明を行います。患者様が納得された上で治療を進めます。
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition space-y-4">
+                        <div class="w-14 h-14 bg-dental-50 rounded-2xl flex items-center justify-center text-dental-700 text-2xl font-bold">
+                            <i class="fa-solid fa-car"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-dental-700">便利なアクセス環境</h3>
+                        <p class="text-slate-600 leading-relaxed text-sm sm:text-base">
+                            さくら台駅西口近く、また近隣コインパーキングの30分無料券をご用意。お車でも安心してお越しいただけます。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-16 sm:py-24 bg-slate-50/50 border-t border-slate-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                    <span class="text-dental-600 font-bold tracking-wider text-sm uppercase">Medical Services</span>
+                    <h2 class="text-2xl sm:text-4xl font-bold text-dental-700 tracking-tight">診療内容のご案内</h2>
+                    <div class="w-16 h-1 bg-dental-600 mx-auto rounded-full"></div>
+                    <p class="text-slate-600 text-base leading-relaxed max-w-2xl mx-auto text-left sm:text-center">
+                        当院では、虫歯や歯周病の治療といった日常的な歯科診療を中心に、患者様のニーズに合わせてインプラントやホワイトニング、矯正などの自費診療も一部取り扱っております。
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                    <!-- General Dental (Insurance - Main) -->
+                    <div class="bg-white p-8 sm:p-10 rounded-3xl shadow-sm border border-slate-100 flex flex-col justify-between space-y-6">
+                        <div class="space-y-4">
+                            <div class="w-12 h-12 bg-dental-50 text-dental-700 rounded-xl flex items-center justify-center text-xl font-bold">
+                                <i class="fa-solid fa-tooth"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-dental-700">虫歯・歯周病治療（主な診療）</h3>
+                            <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                                歯が痛い、歯ぐきが腫れる・出血するなど、日々の健康を守るための一般的な保険診療を中心に行っております。早期発見・早期治療でお口の健康をしっかりサポートします。
+                            </p>
+                        </div>
+                        <div class="pt-4 border-t border-slate-100 text-xs text-dental-600 font-semibold flex items-center gap-1.5">
+                            <i class="fa-solid fa-check"></i> 健康保険適用・丁寧な治療
+                        </div>
+                    </div>
+
+                    <!-- Other options / Private info box -->
+                    <div class="bg-white p-8 sm:p-10 rounded-3xl shadow-sm border border-slate-100 flex flex-col justify-between space-y-6">
+                        <div class="space-y-4">
+                            <div class="w-12 h-12 bg-dental-50 text-dental-700 rounded-xl flex items-center justify-center text-xl font-bold">
+                                <i class="fa-solid fa-circle-plus"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-dental-700">その他のご相談について</h3>
+                            <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                                インプラント、ホワイトニング、矯正歯科などの自費診療についてもご相談を承っております。患者様のご希望や症状に合わせてご案内いたしますので、お気軽にお声がけください。
+                            </p>
+                        </div>
+                        <div class="pt-4 border-t border-slate-100 text-xs text-dental-600 font-semibold flex items-center gap-1.5">
+                            <i class="fa-solid fa-check"></i> ご希望に合わせたご提案
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hours & Consultation Section (With Phone Reservation Notice) -->
+        <section id="hours" class="py-16 sm:py-24 bg-white border-y border-slate-100">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-12 space-y-4">
+                    <span class="text-dental-600 font-bold tracking-wider text-sm uppercase">Consultation Hours & Appointment</span>
+                    <h2 class="text-2xl sm:text-4xl font-bold text-dental-700 tracking-tight">診療時間・ご予約のご案内</h2>
+                    <div class="w-16 h-1 bg-dental-600 mx-auto rounded-full"></div>
+                    <p class="text-slate-600 text-base">
+                        当院は<strong>ご予約優先制</strong>となっております。<br>ご予約やお問い合わせはお電話にて承っておりますので、お気軽にご連絡ください。
+                    </p>
+                </div>
+
+                <!-- Call Appointment Banner (Enhanced Blue Base) -->
+                <div class="bg-gradient-to-r from-dental-900 via-dental-700 to-dental-800 text-white rounded-3xl p-6 sm:p-8 mb-10 shadow-2xl border-4 border-dental-300 flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden">
+                    <div class="absolute -right-10 -bottom-10 text-dental-600/20 text-9xl pointer-events-none">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <div class="space-y-2 text-center md:text-left relative z-10">
+                        <span class="bg-dental-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">お電話でのご予約・お問い合わせ</span>
+                        <h3 class="text-lg sm:text-2xl font-bold">ご予約はすべてお電話にて承っております</h3>
+                        <p class="text-dental-100 text-xs sm:text-sm leading-relaxed"><strong class="text-white font-semibold underline decoration-dental-400 underline-offset-4">午前は11時以降、午後は16時以降</strong>の時間帯が<br class="hidden sm:inline">比較的落ち着いており、<br>お電話がスムーズです。</p>
+                    </div>
+                    <a href="tel:0312345678" class="bg-white text-dental-900 hover:bg-dental-50 px-5 sm:px-8 py-3.5 sm:py-4 rounded-2xl font-bold text-lg sm:text-xl shadow-xl transition flex items-center justify-center gap-3 shrink-0 relative z-10 border-2 border-dental-200 whitespace-nowrap w-full md:w-auto">
+                        <i class="fa-solid fa-phone text-dental-600"></i>
+                        <span>03-1234-5678</span>
+                    </a>
+                </div>
+
+                <div class="bg-dental-50/20 rounded-3xl shadow-xl border border-slate-100 overflow-hidden">
+                    <div class="bg-dental-700 text-white p-6 sm:p-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+                        <div>
+                            <span class="bg-white/15 text-white px-3 py-1 rounded-full text-xs font-bold inline-block mb-2">受付時間一覧</span>
+                            <h3 class="text-xl sm:text-2xl font-bold">診療カレンダー</h3>
+                        </div>
+                        <div class="text-xs text-dental-100 bg-dental-800 px-4 py-2 rounded-xl">
+                            <i class="fa-solid fa-phone mr-1"></i> ご予約：お電話にて受付中
+                        </div>
+                    </div>
+
+                    <div class="p-6 sm:p-10 bg-white">
+                        <!-- Desktop & Tablet Optimized Table -->
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left border-collapse min-w-[600px]">
+                                <thead>
+                                    <tr class="border-b-2 border-slate-200 text-dental-700">
+                                        <th class="py-4 px-4 font-bold text-base">診療時間</th>
+                                        <th class="py-4 px-4 font-bold text-center">月</th>
+                                        <th class="py-4 px-4 font-bold text-center">火</th>
+                                        <th class="py-4 px-4 font-bold text-center">水</th>
+                                        <th class="py-4 px-4 font-bold text-center bg-dental-100/70 text-dental-800">木</th>
+                                        <th class="py-4 px-4 font-bold text-center">金</th>
+                                        <th class="py-4 px-4 font-bold text-center bg-dental-100/70 text-dental-800">土</th>
+                                        <th class="py-4 px-4 font-bold text-center text-slate-400">日・祝</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-slate-100 text-slate-700">
+                                    <tr class="hover:bg-slate-50/50">
+                                        <td class="py-5 px-4 font-semibold text-dental-700">
+                                            9:30 〜 13:30<br>
+                                            <span class="text-xs text-slate-400 font-normal">（午前受付）</span>
+                                        </td>
+                                        <td class="py-5 px-4 text-center"><i class="fa-solid fa-circle text-dental-600 text-lg"></i></td>
+                                        <td class="py-5 px-4 text-center"><i class="fa-solid fa-circle text-dental-600 text-lg"></i></td>
+                                        <td class="py-5 px-4 text-center"><i class="fa-solid fa-circle text-dental-600 text-lg"></i></td>
+                                        <td class="py-5 px-4 text-center bg-dental-50/60"><i class="fa-solid fa-circle text-dental-600 text-lg"></i></td>
+                                        <td class="py-5 px-4 text-center"><i class="fa-solid fa-circle text-dental-600 text-lg"></i></td>
+                                        <td class="py-5 px-4 text-center bg-dental-50/60"><i class="fa-solid fa-circle text-dental-600 text-lg"></i></td>
+                                        <td class="py-5 px-4 text-center text-slate-300"><i class="fa-solid fa-xmark text-lg"></i></td>
+                                    </tr>
+                                    <tr class="hover:bg-slate-50/50">
+                                        <td class="py-5 px-4 font-semibold text-dental-700">
+                                            13:30 〜 15:00<br>
+                                            <span class="text-xs text-dental-500 font-normal">（昼休み）</span>
+                                        </td>
+                                        <td class="py-5 px-4 text-center text-xs text-dental-600 font-bold bg-dental-50/40" colspan="3">昼休み（休診）</td>
+                                        <td class="py-5 px-4 text-center text-xs text-dental-700 font-bold bg-dental-100/50">午後休診</td>
+                                        <td class="py-5 px-4 text-center text-xs text-dental-600 font-bold bg-dental-50/40">昼休み（休診）</td>
+                                        <td class="py-5 px-4 text-center text-xs text-dental-700 font-bold bg-dental-100/50">午後休診</td>
+                                        <td class="py-5 px-4 text-center text-xs text-slate-400 font-normal">午後休診</td>
+                                    </tr>
+                                    <tr class="hover:bg-slate-50/50">
+                                        <td class="py-5 px-4 font-semibold text-dental-700">
+                                            15:00 〜 19:00<br>
+                                            <span class="text-xs text-slate-400 font-normal">（午後受付）</span>
+                                        </td>
+                                        <td class="py-5 px-4 text-center"><i class="fa-solid fa-circle text-dental-600 text-lg"></i></td>
+                                        <td class="py-5 px-4 text-center"><i class="fa-solid fa-circle text-dental-600 text-lg"></i></td>
+                                        <td class="py-5 px-4 text-center"><i class="fa-solid fa-circle text-dental-600 text-lg"></i></td>
+                                        <td class="py-5 px-4 text-center bg-dental-100/70 text-dental-700 font-bold text-sm"><span class="bg-dental-200/80 px-2.5 py-1 rounded-full text-xs">休診</span></td>
+                                        <td class="py-5 px-4 text-center"><i class="fa-solid fa-circle text-dental-600 text-lg"></i></td>
+                                        <td class="py-5 px-4 text-center bg-dental-100/70 text-dental-700 font-bold text-sm"><span class="bg-dental-200/80 px-2.5 py-1 rounded-full text-xs">休診</span></td>
+                                        <td class="py-5 px-4 text-center text-slate-300"><i class="fa-solid fa-xmark text-lg"></i></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Mobile card summary of hours -->
+                        <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4 pt-6 border-t border-slate-100">
+                            <div class="bg-dental-50/50 p-5 rounded-2xl border border-dental-100">
+                                <span class="font-bold text-dental-700 block mb-2"><i class="fa-solid fa-calendar-days text-dental-600 mr-2"></i>月・火・水・金曜日</span>
+                                <p class="text-sm text-slate-600 leading-relaxed">
+                                    午前：9:30 〜 13:30<br>
+                                    昼休み：13:30 〜 15:00<br>
+                                    午後：15:00 〜 19:00
+                                </p>
+                            </div>
+                            <div class="bg-dental-100/40 p-5 rounded-2xl border border-dental-200">
+                                <span class="font-bold text-dental-800 block mb-2"><i class="fa-solid fa-calendar-days text-dental-600 mr-2"></i>木・土曜日</span>
+                                <p class="text-sm text-slate-600 leading-relaxed">
+                                    午前のみ診療：9:30 〜 13:30<br>
+                                    <span class="text-xs text-dental-700 font-semibold mt-1 block">※木曜・土曜の午後は休診となります</span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="mt-6 text-xs text-slate-500 bg-slate-50 p-4 rounded-xl border border-slate-100">
+                            <i class="fa-solid fa-circle-info text-dental-600 mr-1"></i> 【休診日】木曜午後・土曜午後・日曜・祝日 ／ ご来院の際は保険証をお持ちください。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Access & Parking Guide Section -->
+        <section id="access" class="py-16 sm:py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                    <span class="text-dental-600 font-bold tracking-wider text-sm uppercase">Access & Parking</span>
+                    <h2 class="text-2xl sm:text-4xl font-bold text-dental-700 tracking-tight">アクセス・駐車場案内</h2>
+                    <div class="w-16 h-1 bg-dental-600 mx-auto rounded-full"></div>
+                    <p class="text-slate-600 text-base">
+                        住所：中央町1丁目5番地（さくらビル2F）
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                    <!-- Map & Station Guide -->
+                    <div class="space-y-6">
+                        <div class="bg-slate-100 rounded-3xl overflow-hidden shadow-inner h-80 relative border border-slate-200 flex items-center justify-center">
+                            <div class="absolute inset-0 bg-dental-50/30 flex flex-col items-center justify-center p-6 text-center">
+                                <div class="w-16 h-16 bg-dental-700 text-white rounded-full flex items-center justify-center shadow-lg mb-3 animate-bounce">
+                                    <i class="fa-solid fa-location-dot text-2xl"></i>
+                                </div>
+                                <span class="font-bold text-dental-700 text-lg">さくら台デンタルクリニック</span>
+                                <span class="text-sm text-slate-600 mt-1">東京都中央町一丁目5番地（さくらビル2F）</span>
+                                <a href="https://maps.google.com/?q=中央町一丁目5番地" target="_blank" class="mt-4 bg-white text-dental-700 hover:bg-dental-50 px-4 py-2 rounded-xl text-xs font-bold shadow border border-dental-200 transition">
+                                    <i class="fa-solid fa-map-location-dot mr-1"></i> Google Mapsで開く
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm space-y-4">
+                            <div class="inline-flex items-center gap-2 bg-dental-50 text-dental-700 px-3.5 py-1 rounded-full text-xs font-bold border border-dental-100">
+                                <i class="fa-solid fa-train text-dental-600"></i> 電車でお越しの方へ
+                            </div>
+                            <h3 class="font-bold text-dental-700 text-lg flex items-center gap-2">
+                                <i class="fa-solid fa-train text-dental-600"></i> さくら台駅からの道のり（徒歩3分）
+                            </h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                さくら台駅の<strong>西口を出てすぐのロータリー前</strong>にある<strong>「さくらビル」の2階</strong>です。1階に調剤薬局が入っておりますので、そちらが目印となります（中央町一丁目5番地）。
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Parking Guide & Free Ticket Info -->
+                    <div class="space-y-6">
+                        <div class="bg-white p-8 rounded-3xl shadow-lg border border-dental-100 space-y-6 relative overflow-hidden">
+                            <div class="absolute -right-10 -bottom-10 text-dental-50 text-9xl -z-0">
+                                <i class="fa-solid fa-car"></i>
+                            </div>
+                            <div class="relative z-10 space-y-6">
+                                <div class="inline-flex items-center gap-2 bg-dental-50 text-dental-700 px-3.5 py-1 rounded-full text-xs font-bold border border-dental-100">
+                                    <i class="fa-solid fa-ticket text-dental-600"></i> お車でお越しの方へ
+                                </div>
+                                <h3 class="text-2xl font-bold text-dental-700">コインパーキング利用 30分無料券</h3>
+                                <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                                    お車でお越しの患者様向けに、提携コインパーキングでご利用いただける<strong>「30分無料券」</strong>をお渡ししております。受付にお気軽にお申し付けください。
+                                </p>
+                                
+                                <div class="border-t border-slate-100 pt-4 space-y-4">
+                                    <span class="font-bold text-base block text-dental-700"><i class="fa-solid fa-route mr-2 text-dental-600"></i>駐車場からの詳しい道のり（徒歩約2〜3分）</span>
+                                    
+                                    <!-- Step-by-Step Route Guide -->
+                                    <div class="space-y-3">
+                                        <!-- Step 1 -->
+                                        <div class="bg-dental-50/70 p-4 rounded-2xl border border-dental-100 flex items-start gap-3">
+                                            <div class="w-7 h-7 bg-dental-700 text-white rounded-full flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">1</div>
+                                            <div class="space-y-1 text-sm">
+                                                <strong class="text-dental-700 block">さくらパーキング第2を出発</strong>
+                                                <p class="text-slate-600 leading-relaxed">駐車場を出て、すぐ<strong>左側の路地</strong>へ進みます。</p>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Step 2 -->
+                                        <div class="bg-dental-50/70 p-4 rounded-2xl border border-dental-100 flex items-start gap-3">
+                                            <div class="w-7 h-7 bg-dental-700 text-white rounded-full flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">2</div>
+                                            <div class="space-y-1 text-sm">
+                                                <strong class="text-dental-700 block">大通りを左折</strong>
+                                                <p class="text-slate-600 leading-relaxed">路地を直進して大通りに出ましたら、<strong>左に曲がって</strong>20mほどお進みください。</p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Step 3 -->
+                                        <div class="bg-dental-50/70 p-4 rounded-2xl border border-dental-100 flex items-start gap-3">
+                                            <div class="w-7 h-7 bg-dental-700 text-white rounded-full flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">3</div>
+                                            <div class="space-y-1 text-sm">
+                                                <strong class="text-dental-700 block">さくらビル2階（到着）</strong>
+                                                <p class="text-slate-600 leading-relaxed">1階に調剤薬局が入っている「さくらビル」の2階が当院です。</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Corner/Street Photo -->
+                                    <div class="relative h-44 sm:h-52 rounded-2xl overflow-hidden bg-dental-50 border border-dental-100 shadow-sm mt-3">
+                                        <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80" alt="曲がり角・街並みのイメージ" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/800x400/1a365d/ffffff?text=Street+Corner'">
+                                        <div class="absolute bottom-3 left-3 bg-white/95 backdrop-blur-sm px-3 py-1.5 rounded-lg text-xs font-bold text-dental-700 shadow border border-slate-100">
+                                            <i class="fa-solid fa-camera text-dental-600 mr-1"></i> パーキング出口付近の街並み
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-dental-100 p-6 rounded-2xl border-2 border-dental-400 shadow-md shadow-dental-200/50 flex items-start gap-4 relative overflow-hidden">
+                            <div class="w-12 h-12 rounded-xl bg-dental-700 text-white flex items-center justify-center shrink-0 shadow-sm relative z-10 mt-0.5">
+                                <i class="fa-solid fa-circle-info text-xl"></i>
+                            </div>
+                            <div class="space-y-1.5 relative z-10">
+                                <h4 class="font-bold text-dental-800 text-base">駐車証明書をお持ちください</h4>
+                                <p class="text-sm text-dental-700 leading-relaxed">
+                                    コインパーキング精算機で発行される<strong class="text-dental-900 bg-white/60 px-1.5 py-0.5 rounded ml-0.5 mr-0.5">「駐車証明書」</strong>を受付にご提示いただけますと、スムーズに30分無料券をお渡しできます。
+                                </p>
+                            </div>
+                            <!-- Subtle background ticket icon -->
+                            <div class="absolute -right-4 -bottom-6 text-dental-200/70 text-7xl z-0 transform -rotate-12">
+                                <i class="fa-solid fa-ticket"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Staff & Director Profile Section -->
+        <section id="staff" class="py-16 sm:py-24 bg-dental-50/20 border-t border-slate-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                    <span class="text-dental-600 font-bold tracking-wider text-sm uppercase">Director & Staff</span>
+                    <h2 class="text-2xl sm:text-4xl font-bold text-dental-700 tracking-tight">院長・スタッフ紹介</h2>
+                    <div class="w-16 h-1 bg-dental-600 mx-auto rounded-full"></div>
+                    <p class="text-slate-600 text-base">
+                        患者様に安心してご来院いただけるよう、いつも笑顔で優しいスタッフと院長がお迎えいたします。
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+                    <!-- Director Profile -->
+                    <div class="bg-white rounded-3xl overflow-hidden shadow-md border border-slate-100 flex flex-col">
+                        <div class="h-72 bg-dental-50 relative">
+                            <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=600&q=80" alt="藤井院長" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/600x600/1a365d/ffffff?text=Director'">
+                            <div class="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-lg text-xs font-bold text-dental-700 shadow border border-slate-100">
+                                院長
+                            </div>
+                        </div>
+                        <div class="p-8 space-y-4 flex-1 flex flex-col justify-between">
+                            <div class="space-y-3">
+                                <span class="text-xs font-semibold text-dental-600 tracking-wider">院長</span>
+                                <h3 class="text-2xl font-bold text-dental-700">藤井 雅彦</h3>
+                                
+                                <!-- Added background & affiliations -->
+                                <div class="bg-dental-50/60 p-3.5 rounded-xl border border-dental-100 text-xs text-slate-700 space-y-1">
+                                    <p><strong class="text-dental-700">経歴：</strong>〇〇大学歯学部 卒業</p>
+                                    <p><strong class="text-dental-700">所属：</strong>日本歯周病学会 所属</p>
+                                </div>
+
+                                <p class="text-slate-600 text-sm leading-relaxed pt-1">
+                                    「地域の皆様のお口の健康を守り、優しいスタッフと共に笑顔で通っていただけるクリニックを目指しています。虫歯や歯周病の治療を中心に、お気軽にご相談ください。」
+                                </p>
+                            </div>
+                            <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-400">
+                                <span>さくら台デンタルクリニック</span>
+                                <span class="text-dental-600 font-bold"><i class="fa-solid fa-tooth mr-1"></i> 歯科医師</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Staff Profile / Atmosphere -->
+                    <div class="bg-white rounded-3xl overflow-hidden shadow-md border border-slate-100 flex flex-col">
+                        <div class="h-72 bg-dental-50 relative">
+                            <img src="https://images.unsplash.com/photo-1594824813568-a4009df342ee?auto=format&fit=crop&w=600&q=80" alt="スタッフ一同" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/600x600/1a365d/ffffff?text=Staff'">
+                            <div class="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-lg text-xs font-bold text-dental-700 shadow border border-slate-100">
+                                スタッフ一同
+                            </div>
+                        </div>
+                        <div class="p-8 space-y-4 flex-1 flex flex-col justify-between">
+                            <div class="space-y-2">
+                                <span class="text-xs font-semibold text-dental-600 tracking-wider">優しい歯科衛生士・受付スタッフ</span>
+                                <h3 class="text-2xl font-bold text-dental-700">温かい心配りと笑顔</h3>
+                                <p class="text-slate-600 text-sm leading-relaxed pt-2">
+                                    「当院のスタッフはみんな優しくアットホームです！緊張されている患者様が少しでもリラックスできるよう、温かい笑顔と丁寧なコミュニケーションを心がけています。何でもお気軽にお声がけくださいね。」
+                                </p>
+                            </div>
+                            <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-400">
+                                <span>さくら台デンタルクリニック</span>
+                                <span class="text-dental-600 font-bold"><i class="fa-solid fa-heart mr-1"></i> 笑顔でお迎え</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dental-900 text-white pt-16 pb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center border-b border-dental-800 pb-12">
+                <div class="md:col-span-4 space-y-3">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-dental-700 flex items-center justify-center text-white shrink-0">
+                            <i class="fa-solid fa-tooth text-xl"></i>
+                        </div>
+                        <span class="text-base lg:text-lg font-bold tracking-tight whitespace-nowrap">さくら台デンタルクリニック</span>
+                    </div>
+                    <p class="text-xs text-slate-400">
+                        〒123-4567 東京都中央町1丁目5番地<br>
+                        (さくらビル2F)<br>
+                        さくら台駅西口 徒歩3分
+                    </p>
+                </div>
+                
+                <div class="md:col-span-4 flex flex-col items-start md:items-center text-center">
+                    <span class="text-xs text-slate-400 mb-1.5 block">お気軽にお電話ください（ご予約優先）</span>
+                    <a href="tel:0312345678" class="text-xl lg:text-2xl font-bold text-white hover:text-dental-200 transition inline-flex items-center gap-2">
+                        <i class="fa-solid fa-phone text-dental-500 text-lg"></i> 03-1234-5678
+                    </a>
+                </div>
+
+                <div class="md:col-span-4 flex md:justify-end">
+                    <a href="#hours" class="bg-dental-700 hover:bg-dental-800 text-white px-6 py-3.5 rounded-xl font-bold transition text-center shadow-lg shadow-dental-700/30 w-full md:w-auto inline-flex items-center justify-center">
+                        <i class="fa-regular fa-clock mr-2"></i> 診療時間・お電話予約
+                    </a>
+                </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+                <p>&copy; さくら台デンタルクリニック All Rights Reserved. (院長：藤井)</p>
+                <div class="flex gap-6">
+                    <a href="#about" class="hover:text-slate-300 transition">当院について</a>
+                    <a href="#services" class="hover:text-dental-700 transition">診療内容</a>
+                    <a href="#hours" class="hover:text-dental-700 transition">診療時間</a>
+                    <a href="#access" class="hover:text-dental-700 transition">アクセス</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu Toggle -->
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking nav links
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
